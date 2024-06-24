@@ -16,6 +16,9 @@
 
   <h2>Exercice 2</h2>
   <Exercice_02 />
+
+  <h2>Rendu Liste</h2>
+  <RenduListe />
 </template>
 
 <script>
@@ -23,6 +26,7 @@ import Exercice_01 from '@/components/Exercice_01.vue';
 import Exercice_02 from '@/components/Exercice_02.vue';
 import LiaisonFormulaire from '@/components/LiaisonFormulaire.vue';
 import RenduConditionnel from '@/components/RenduConditionnel.vue';
+import RenduListe from '@/components/RenduListe.vue';
 
 export default {
   data() {
@@ -36,7 +40,8 @@ export default {
     Exercice_01, 
     Exercice_02,
     LiaisonFormulaire, 
-    RenduConditionnel
+    RenduConditionnel, 
+    RenduListe
   },
   methods: {
     changerTexte() {
