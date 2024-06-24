@@ -13,10 +13,14 @@
 
   <h2>Rendu Conditionnel</h2>
   <RenduConditionnel />
+
+  <h2>Exercice 2</h2>
+  <Exercice_02 />
 </template>
 
 <script>
 import Exercice_01 from '@/components/Exercice_01.vue';
+import Exercice_02 from '@/components/Exercice_02.vue';
 import LiaisonFormulaire from '@/components/LiaisonFormulaire.vue';
 import RenduConditionnel from '@/components/RenduConditionnel.vue';
 
@@ -30,6 +34,7 @@ export default {
   }, 
   components: {
     Exercice_01, 
+    Exercice_02,
     LiaisonFormulaire, 
     RenduConditionnel
   },
