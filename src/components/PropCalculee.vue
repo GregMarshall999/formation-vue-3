@@ -14,6 +14,11 @@
     <button @click="cacher = !cacher">
         {{ cacher ? 'Afficher toutes les taches' : 'Cacher les taches complétés' }}
     </button>
+
+    <h2>Compteur</h2>
+    <p>Compte: {{ compte }}</p>
+    <p>Compte double: {{ compteDouble }}</p>
+    <button @click="increment">+</button>
 </template>
 
 <script>
@@ -28,14 +33,19 @@ export default {
                 { id: id++, text: 'Apprendre Vue', done: false }
             ], 
             newTache: null, 
-            cacher: false
+            cacher: false, 
+            compte: 0
         }
     }, 
     computed: {
         filtrerTaches() {
+            console.log('filtrer')
             return this.cacher ? 
                 this.taches.filter(t => !t.done) 
                 : this.taches;
+        },
+        compteDouble() {
+            return this.compte * 2;
         }
     },
     methods: {
@@ -45,6 +55,9 @@ export default {
         }, 
         retirerTache(tache) {
             this.taches = this.taches.filter(t => t !== tache);
+        }, 
+        increment() {
+            this.compte++;
         }
     }
 }
