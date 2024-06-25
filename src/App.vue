@@ -26,10 +26,13 @@
 
   <h2>Cycle de Vie Vue</h2>
   <LifeCycle />
-  </div>
-  
+
   <h2>Watchers / Observateurs</h2>
   <Watchers />
+  </div>
+  
+  <h2>Props</h2>
+  <Props :message="'Un message passé depuis le composant parent'" />
 
   <br>
   <button @click="toggle = !toggle">{{ toggle ? 'Cacher' : 'Afficher' }}</button>
@@ -44,6 +47,7 @@ import RenduListe from '@/components/RenduListe.vue';
 import PropCalculee from '@/components/PropCalculee.vue';
 import LifeCycle from '@/components/LifeCycle.vue';
 import Watchers from '@/components/Watchers.vue';
+import Props from '@/components/Props.vue';
 
 export default {
   data() {
@@ -62,7 +66,8 @@ export default {
     RenduListe, 
     PropCalculee, 
     LifeCycle, 
-    Watchers
+    Watchers, 
+    Props
   },
   methods: {
     changerTexte() {

@@ -24,6 +24,7 @@ export default {
             console.log('ancien compte:', oldCompte, ' | nouveau compte:', newCompte);
         },
         tacheId() {
+            console.log('tacheId a changé')
             this.fetchTache();
         }
     }, 
