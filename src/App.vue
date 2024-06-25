@@ -24,6 +24,8 @@
   
   <h2>Propriétés Calculées</h2>
   <PropCalculee />
+
+  <button @click="toggle = !toggle">{{ toggle ? 'Cacher' : 'Afficher' }}</button>
 </template>
 
 <script>

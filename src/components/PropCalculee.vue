@@ -50,7 +50,7 @@ export default {
     },
     methods: {
         ajouterTache() {
-            this.taches.push({ id: id++, text: this.newTache });
+            this.taches.push({ id: id++, text: this.newTache, done:true });
             this.newTache = '';
         }, 
         retirerTache(tache) {
