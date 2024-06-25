@@ -20,11 +20,15 @@
 
   <h2>Rendu Liste</h2>
   <RenduListe />
-  </div>
-  
+
   <h2>Propriétés Calculées</h2>
   <PropCalculee />
+  </div>
+  
+  <h2>Cycle de Vie Vue</h2>
+  <LifeCycle />
 
+  <br>
   <button @click="toggle = !toggle">{{ toggle ? 'Cacher' : 'Afficher' }}</button>
 </template>
 
@@ -35,6 +39,7 @@ import LiaisonFormulaire from '@/components/LiaisonFormulaire.vue';
 import RenduConditionnel from '@/components/RenduConditionnel.vue';
 import RenduListe from '@/components/RenduListe.vue';
 import PropCalculee from '@/components/PropCalculee.vue';
+import LifeCycle from '@/components/LifeCycle.vue';
 
 export default {
   data() {
@@ -51,7 +56,8 @@ export default {
     LiaisonFormulaire, 
     RenduConditionnel, 
     RenduListe, 
-    PropCalculee
+    PropCalculee, 
+    LifeCycle
   },
   methods: {
     changerTexte() {
