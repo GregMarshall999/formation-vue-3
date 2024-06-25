@@ -29,10 +29,14 @@
 
   <h2>Watchers / Observateurs</h2>
   <Watchers />
-  </div>
-  
+
   <h2>Props</h2>
   <Props :message="'Un message passé depuis le composant parent'" />
+  </div>
+  
+  <h2>Emit</h2>
+  <Emits @reponse="ecouterEnfant" />
+  {{ messageEnfant }}
 
   <br>
   <button @click="toggle = !toggle">{{ toggle ? 'Cacher' : 'Afficher' }}</button>
@@ -48,6 +52,7 @@ import PropCalculee from '@/components/PropCalculee.vue';
 import LifeCycle from '@/components/LifeCycle.vue';
 import Watchers from '@/components/Watchers.vue';
 import Props from '@/components/Props.vue';
+import Emits from '@/components/Emits.vue';
 
 export default {
   data() {
@@ -55,7 +60,8 @@ export default {
       texte: 'Du Texte déclaratif', 
       couleurTitre: 'title', 
       texteAAfficher: 'Coucou', 
-      toggle: false
+      toggle: false, 
+      messageEnfant: 'L`enfant n`a pas encore envoyé de message'
     }
   }, 
   components: {
@@ -67,11 +73,16 @@ export default {
     PropCalculee, 
     LifeCycle, 
     Watchers, 
-    Props
+    Props, 
+    Emits
   },
   methods: {
     changerTexte() {
       this.texteAAfficher = 'Toto'
+    }, 
+    ecouterEnfant(e, b) {
+      console.log(e, b)
+      this.messageEnfant = e
     }
   }
 }
