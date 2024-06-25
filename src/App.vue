@@ -32,11 +32,19 @@
 
   <h2>Props</h2>
   <Props :message="'Un message passé depuis le composant parent'" />
-  </div>
-  
+
   <h2>Emit</h2>
   <Emits @reponse="ecouterEnfant" />
   {{ messageEnfant }}
+
+  <h2>Slots</h2>
+  <Slots>
+    <div v-if="enAttente">{{ enAttente }}</div>
+  </Slots>
+  </div>
+  
+  <button @click="show = !show">hide show</button>
+  <div v-show="show">Un message</div>
 
   <br>
   <button @click="toggle = !toggle">{{ toggle ? 'Cacher' : 'Afficher' }}</button>
@@ -53,6 +61,7 @@ import LifeCycle from '@/components/LifeCycle.vue';
 import Watchers from '@/components/Watchers.vue';
 import Props from '@/components/Props.vue';
 import Emits from '@/components/Emits.vue';
+import Slots from '@/components/Slots.vue';
 
 export default {
   data() {
@@ -61,7 +70,9 @@ export default {
       couleurTitre: 'title', 
       texteAAfficher: 'Coucou', 
       toggle: false, 
-      messageEnfant: 'L`enfant n`a pas encore envoyé de message'
+      messageEnfant: 'L`enfant n`a pas encore envoyé de message', 
+      enAttente: null, 
+      show: false
     }
   }, 
   components: {
@@ -74,7 +85,8 @@ export default {
     LifeCycle, 
     Watchers, 
     Props, 
-    Emits
+    Emits, 
+    Slots
   },
   methods: {
     changerTexte() {
@@ -84,6 +96,9 @@ export default {
       console.log(e, b)
       this.messageEnfant = e
     }
+  }, 
+  mounted() {
+    setTimeout(() => this.enAttente = 'Message d`attente', 3000)
   }
 }
 
