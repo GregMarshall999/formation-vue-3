@@ -11,6 +11,7 @@
         <router-link :to="{ name: 'Emits' }">Emits</router-link> |
         <router-link :to="{ name: 'Slots' }">Slots</router-link> |
         <router-link :to="{ name: 'Exercice_01' }">Exercice_01</router-link> |
-        <router-link :to="{ name: 'Exercice_02' }">Exercice_02</router-link>
+        <router-link :to="{ name: 'Exercice_02' }">Exercice_02</router-link> | 
+        <router-link :to="{ name: 'ExempleForm' }">Exemple Formulaire</router-link>
     </nav>
 </template>

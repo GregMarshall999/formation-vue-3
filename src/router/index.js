@@ -14,6 +14,8 @@ import Props from '@/vue/Props.vue';
 import Emits from '@/vue/Emits.vue';
 import Slots from '@/vue/Slots.vue';
 
+import ExempleForm from '@/vue/ExempleFormulaire/ExempleForm.vue';
+
 const routes = [
     {
         path: '/textDeclaratif', 
@@ -76,6 +78,11 @@ const routes = [
         name: 'Exercice_02', 
         component: Exercice_02
     },
+    {
+        path: '/exempleForm',
+        name: 'ExempleForm',
+        component: ExempleForm
+    }
 ]
 
 const router = createRouter({ 
