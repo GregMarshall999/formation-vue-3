@@ -8,7 +8,7 @@ Je suis un composant Enfant
 </template>
 
 <script>
-import Emits from '@/components/Emits.vue'
+import Emits from '@/vue/Emits.vue'
 
 export default {
     data() {

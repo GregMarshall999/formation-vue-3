@@ -1,4 +1,8 @@
 <template>
+  <NavBar />
+  <br>
+  <router-view/>
+  
   <div v-if="toggle">
     <div>
     <h1 :class="couleurTitre">{{ texte }}</h1>
@@ -41,27 +45,29 @@
   <Slots>
     <div v-if="enAttente">{{ enAttente }}</div>
   </Slots>
-  </div>
-  
+
   <button @click="show = !show">hide show</button>
   <div v-show="show">Un message</div>
+  </div>
 
   <br>
   <button @click="toggle = !toggle">{{ toggle ? 'Cacher' : 'Afficher' }}</button>
 </template>
 
 <script>
-import Exercice_01 from '@/components/Exercice_01.vue';
-import Exercice_02 from '@/components/Exercice_02.vue';
-import LiaisonFormulaire from '@/components/LiaisonFormulaire.vue';
-import RenduConditionnel from '@/components/RenduConditionnel.vue';
-import RenduListe from '@/components/RenduListe.vue';
-import PropCalculee from '@/components/PropCalculee.vue';
-import LifeCycle from '@/components/LifeCycle.vue';
-import Watchers from '@/components/Watchers.vue';
-import Props from '@/components/Props.vue';
-import Emits from '@/components/Emits.vue';
-import Slots from '@/components/Slots.vue';
+import NavBar from '@/components/NavBar.vue'
+
+import Exercice_01 from '@/vue/Exercice_01.vue';
+import Exercice_02 from '@/vue/Exercice_02.vue';
+import LiaisonFormulaire from '@/vue/LiaisonFormulaire.vue';
+import RenduConditionnel from '@/vue/RenduConditionnel.vue';
+import RenduListe from '@/vue/RenduListe.vue';
+import PropCalculee from '@/vue/PropCalculee.vue';
+import LifeCycle from '@/vue/LifeCycle.vue';
+import Watchers from '@/vue/Watchers.vue';
+import Props from '@/vue/Props.vue';
+import Emits from '@/vue/Emits.vue';
+import Slots from '@/vue/Slots.vue';
 
 export default {
   data() {
@@ -76,6 +82,8 @@ export default {
     }
   }, 
   components: {
+    NavBar,
+
     Exercice_01, 
     Exercice_02,
     LiaisonFormulaire, 

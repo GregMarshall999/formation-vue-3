@@ -25,11 +25,13 @@ export default {
     }, 
     mounted() {
         setTimeout(() => {
-            //console.log('Mounted');
-            this.variable = 'Test'
-            //console.log(this.$refs.refAcceuil);
-            this.$refs.refAcceuil.textContent = 'La page est prête!';
-            this.$refs.refAcceuil.ariaLabel = 'Affichage de l`état de la page';
+            if(this.$refs.refAcceuil) {
+                //console.log('Mounted');
+                this.variable = 'Test'
+                //console.log(this.$refs.refAcceuil);
+                this.$refs.refAcceuil.textContent = 'La page est prête!';
+                this.$refs.refAcceuil.ariaLabel = 'Affichage de l`état de la page';
+            }
         }, 5000);
     }, 
     beforeUpdate() {
