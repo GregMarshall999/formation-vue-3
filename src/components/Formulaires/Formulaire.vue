@@ -2,6 +2,14 @@
 
 <form @submit.prevent="envoyer">
 
+    <div v-for="c in paramChamp">
+        <label>Votre {{ c.key }}:</label>
+
+        <input v-model="modelValue[c.key]" :type="c.type"/>
+    </div>
+
+    <!--Exemple a la main
+    
     <div>
         <label>Votre Nom:</label>
         <input v-model="contenu.nom" type="text" />
@@ -20,7 +28,8 @@
     <div>
         <label>Votre Participation:</label>
         <input v-model="contenu.participation" type="checkbox" />
-    </div>
+    </div>-->
+    
 
     <button>{{ mode ? 'Créer' : 'Modifier' }}</button>
 </form>
@@ -30,23 +39,20 @@
 <script>
 
 export default {
-    data() {
-        return {
-            contenu: {
-                nom: '',
-                prenom: '',
-                age: null,
-                participation: false
-            }
-        }
-    },
     props: {
-        mode: Boolean
+        mode: Boolean, 
+        paramChamp: Object, 
+        modelValue: Object
     }, 
     methods: {
         envoyer() {
-            console.log(this.contenu);
+            console.log(this.modelValue);
         }
+    }, 
+    mounted() {
+        console.log(this.modelValue['nom']);
+        //console.log(this.contenu)
+        //console.log(this.contenu['nom'].name)
     }
 }
 
