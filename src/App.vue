@@ -23,10 +23,13 @@
 
   <h2>Propriétés Calculées</h2>
   <PropCalculee />
-  </div>
-  
+
   <h2>Cycle de Vie Vue</h2>
   <LifeCycle />
+  </div>
+  
+  <h2>Watchers / Observateurs</h2>
+  <Watchers />
 
   <br>
   <button @click="toggle = !toggle">{{ toggle ? 'Cacher' : 'Afficher' }}</button>
@@ -40,6 +43,7 @@ import RenduConditionnel from '@/components/RenduConditionnel.vue';
 import RenduListe from '@/components/RenduListe.vue';
 import PropCalculee from '@/components/PropCalculee.vue';
 import LifeCycle from '@/components/LifeCycle.vue';
+import Watchers from '@/components/Watchers.vue';
 
 export default {
   data() {
@@ -57,7 +61,8 @@ export default {
     RenduConditionnel, 
     RenduListe, 
     PropCalculee, 
-    LifeCycle
+    LifeCycle, 
+    Watchers
   },
   methods: {
     changerTexte() {
