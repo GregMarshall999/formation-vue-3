@@ -41,6 +41,9 @@ export default {
     updated() {
         //console.log('Updated', this.variable);
         //this.variable = 'value'
+    }, 
+    unmounted() {
+        //console.log('unmounted')
     }
 }
 

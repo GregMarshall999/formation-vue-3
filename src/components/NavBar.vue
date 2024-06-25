@@ -1,5 +1,6 @@
 <template>
     <nav>
+        <router-link :to="'/textDeclaratif'">Texte Déclaratif</router-link> |
         <router-link :to="'/liaisonFormulaire'">Liaison Formulaires</router-link> |
         <router-link :to="{ name: 'RenduCond' }">Rendu Conditionnel</router-link> |
         <router-link :to="{ name: 'RenduListe' }">Rendu Liste</router-link> |

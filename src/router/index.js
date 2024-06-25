@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import Exercice_01 from '@/vue/Exercice_01.vue';
 import Exercice_02 from '@/vue/Exercice_02.vue';
 
+import TexteDeclaratif from '@/vue/TexteDeclaratif.vue';
 import LiaisonFormulaire from '@/vue/LiaisonFormulaire.vue';
 import RenduConditionnel from '@/vue/RenduConditionnel.vue';
 import RenduListe from '@/vue/RenduListe.vue';
@@ -14,6 +15,11 @@ import Emits from '@/vue/Emits.vue';
 import Slots from '@/vue/Slots.vue';
 
 const routes = [
+    {
+        path: '/textDeclaratif', 
+        name: 'textDeclaratif', 
+        component: TexteDeclaratif
+    },
     {
         path: '/liaisonFormulaire', 
         name: 'Liaison', 
