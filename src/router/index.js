@@ -16,6 +16,7 @@ import Slots from '@/vue/Slots.vue';
 import PropsRoutes from '@/vue/PropsRoutes.vue';
 import Details from '@/vue/Details.vue';
 import CRUD from '@/vue/CRUD.vue';
+import Store from '@/vue/Store.vue';
 
 import ExempleForm from '@/vue/ExempleFormulaire/ExempleForm.vue';
 
@@ -101,6 +102,11 @@ const routes = [
         path: '/crud', 
         name:'CRUD', 
         component: CRUD
+    }, 
+    {
+        path: '/store', 
+        name:'Store', 
+        component: Store
     }
 ]
 
