@@ -40,7 +40,11 @@
 
 export default {
     props: {
-        mode: Boolean, 
+        mode: {
+            type: Boolean, 
+            //required: true, 
+            default: true
+        }, 
         paramChamp: Object, 
         modelValue: Object
     }, 
@@ -51,6 +55,8 @@ export default {
     }, 
     mounted() {
         console.log(this.modelValue['nom']);
+
+        console.log(this.mode);
         //console.log(this.contenu)
         //console.log(this.contenu['nom'].name)
     }

@@ -8,7 +8,9 @@
 
     <br>
 
-    <Formulaire v-model="reactif" :paramChamp="reactifTypes" :mode="true" />
+    <Formulaire v-model="reactif" :paramChamp="reactifTypes"  />
+
+    {{ reactif }}
 
 </template>
 
