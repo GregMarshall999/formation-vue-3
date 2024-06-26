@@ -13,6 +13,9 @@ import Watchers from '@/vue/Watchers.vue';
 import Props from '@/vue/Props.vue';
 import Emits from '@/vue/Emits.vue';
 import Slots from '@/vue/Slots.vue';
+import PropsRoutes from '@/vue/PropsRoutes.vue';
+import Details from '@/vue/Details.vue';
+import CRUD from '@/vue/CRUD.vue';
 
 import ExempleForm from '@/vue/ExempleFormulaire/ExempleForm.vue';
 
@@ -82,6 +85,22 @@ const routes = [
         path: '/exempleForm',
         name: 'ExempleForm',
         component: ExempleForm
+    }, 
+    {
+        path: '/propsRoutes', 
+        name: 'PropsRoutes', 
+        component: PropsRoutes
+    }, 
+    {
+        path: '/exempleDetails/:id', 
+        name: 'ExDetails', 
+        component: Details, 
+        props: true
+    },
+    {
+        path: '/crud', 
+        name:'CRUD', 
+        component: CRUD
     }
 ]
 
