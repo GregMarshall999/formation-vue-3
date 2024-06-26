@@ -1,0 +1,25 @@
+{
+    "produits": [
+        {
+            "id": 1,
+            "nom_produit": "Chaussure",
+            "prix_unit": 20, 
+            "qte_stock": 100, 
+            "solde": false
+        }, 
+        {
+            "id": 2,
+            "nom_produit": "TShirt",
+            "prix_unit": 35, 
+            "qte_stock": 200, 
+            "solde": false
+        }, 
+        {
+            "id": 3,
+            "nom_produit": "Shorts",
+            "prix_unit": 40, 
+            "qte_stock": 150, 
+            "solde": true
+        }
+    ]
+}

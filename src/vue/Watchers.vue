@@ -23,21 +23,28 @@ export default {
         compte(newCompte, oldCompte) {
             console.log('ancien compte:', oldCompte, ' | nouveau compte:', newCompte);
         },
-        tacheId() {
+        async tacheId() {
             console.log('tacheId a changé')
-            this.fetchTache();
+            await this.fetchTache();
+            console.log('fin de recup taches')
         }
     }, 
     methods: {
         async fetchTache() {
+            console.log('etape 0')
+
             const reponse = await fetch(
                 `https://jsonplaceholder.typicode.com/todos/${this.tacheId}`
             );
+
+            console.log('etape 1')
             
             //'https://jsonplaceholder.typicode.com/todos/' + this.tacheId meme chose
             //console.log(reponse)
 
             this.tache = await reponse.json();
+
+            console.log('etape 2')
         }
     }
 }
