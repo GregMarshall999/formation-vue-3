@@ -1,6 +1,6 @@
 <template>
 
-    <p>Utilisateur {{ id }}</p>
+    <p>Utilisateur {{ nom }} Avec ID:{{ id }}</p>
 
 </template>
 
@@ -9,6 +9,7 @@
 export default {
     props: {
         id: String, 
+        nom: String
     }
 }
 

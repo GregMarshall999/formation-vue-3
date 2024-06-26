@@ -92,7 +92,7 @@ const routes = [
         component: PropsRoutes
     }, 
     {
-        path: '/exempleDetails/:id', 
+        path: '/exempleDetails/:id/:nom', 
         name: 'ExDetails', 
         component: Details, 
         props: true
