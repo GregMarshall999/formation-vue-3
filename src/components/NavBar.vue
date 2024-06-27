@@ -18,6 +18,7 @@
         <router-link :to="{ name: 'Store' }">Store</router-link> |
         <router-link :to="{ name: 'Axios' }">Axios</router-link> | 
         <router-link :to="{ name: 'Produits' }">Produit</router-link> | 
-        <router-link :to="{ name: 'Mixins' }">Mixins</router-link>
+        <router-link :to="{ name: 'Mixins' }">Mixins</router-link> |
+        <router-link :to="{ name: 'Validate' }">Validate</router-link>
     </nav>
 </template>

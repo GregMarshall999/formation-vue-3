@@ -23,6 +23,7 @@ import CreerProduit from '@/vue/Produits/CreerProduit.vue'
 import ModifierProduit from '@/vue/Produits/ModifierProduit.vue'
 import DetailsProduit from '@/vue/Produits/DetailsProduit.vue'
 import Mixins from '@/vue/Mixins.vue'
+import Validate from '@/vue/Validate.vue'
 
 import ExempleForm from '@/vue/ExempleFormulaire/ExempleForm.vue';
 
@@ -145,6 +146,11 @@ const routes = [
         path: '/mixins', 
         name: 'Mixins', 
         component: Mixins
+    }, 
+    {
+        path: '/validate', 
+        name: 'Validate', 
+        component: Validate
     }
 ]
 
