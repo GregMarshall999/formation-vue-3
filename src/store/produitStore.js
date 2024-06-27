@@ -1,5 +1,8 @@
+import { getProduits, getProduit } from '@/services/ProduitService'
+
 export const state = {
-    produits: [{ key: 'produit 1' }]
+    produits: [], 
+    produit: null
 }
 
 export const getters = {
@@ -8,6 +11,9 @@ export const getters = {
     },
     getProduit(state, index) {
         return state.produits[index];
+    }, 
+    getProduitUnique(state) {
+        return state.produit
     }
 }
 
@@ -17,6 +23,9 @@ export const mutations = {
     },
     ADD_PRODUIT(state, produit) {
         state.produits.push(produit);
+    },
+    SET_PRODUIT(state, produit) {
+        state.produit = produit;
     }
 }
 
@@ -26,6 +35,18 @@ export const actions = {
     }, 
     addProduit({ commit }, produit) {
         commit('ADD_PRODUIT', produit);
+    }, 
+    chargerProduits({ commit }) {
+        getProduits().then(reponse => {
+            commit('SET_PRODUITS', reponse.data);
+        }).catch(e => {
+            console.error(e)
+        });
+    }, 
+    chargerProduit({ commit }, id) {
+        getProduit(id).then(r => {
+            commit('SET_PRODUIT', r.data)
+        }).catch(e => console.log(e))
     }
 }
 

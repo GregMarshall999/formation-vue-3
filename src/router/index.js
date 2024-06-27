@@ -17,6 +17,7 @@ import PropsRoutes from '@/vue/PropsRoutes.vue';
 import Details from '@/vue/Details.vue';
 import CRUD from '@/vue/CRUD.vue';
 import Store from '@/vue/Store.vue';
+import Axios from '@/vue/Axios.vue';
 
 import ExempleForm from '@/vue/ExempleFormulaire/ExempleForm.vue';
 
@@ -107,6 +108,11 @@ const routes = [
         path: '/store', 
         name:'Store', 
         component: Store
+    }, 
+    {
+        path: '/axios', 
+        name:'Axios', 
+        component: Axios
     }
 ]
 

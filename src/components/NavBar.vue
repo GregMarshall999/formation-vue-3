@@ -15,6 +15,7 @@
         <router-link :to="{ name: 'ExempleForm' }">Exemple Formulaire</router-link> |
         <router-link :to="{ name: 'PropsRoutes' }">Props Routes</router-link> | 
         <router-link :to="{ name: 'CRUD' }">Exercice CRUD</router-link> |
-        <router-link :to="{ name: 'Store' }">Store</router-link>
+        <router-link :to="{ name: 'Store' }">Store</router-link> |
+        <router-link :to="{ name: 'Axios' }">Axios</router-link>
     </nav>
 </template>
