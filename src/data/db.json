@@ -27,6 +27,13 @@
       "prix_unit": 10,
       "qte_stock": 200,
       "solde": true
+    },
+    {
+      "id": 0,
+      "nom_produit": "Chaussettes",
+      "prix_unite": 10,
+      "qte_stock": 500,
+      "en_solde": ""
     }
   ]
 }

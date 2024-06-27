@@ -1,4 +1,4 @@
-import { getProduits, getProduit } from '@/services/ProduitService'
+import { getProduits, getProduit, postProduit } from '@/services/ProduitService'
 
 export const state = {
     produits: [], 
@@ -47,6 +47,10 @@ export const actions = {
         getProduit(id).then(r => {
             commit('SET_PRODUIT', r.data)
         }).catch(e => console.log(e))
+    }, 
+    ajouterProduit({ commit }, produit) {
+        postProduit(produit).then(r => {
+        })
     }
 }
 

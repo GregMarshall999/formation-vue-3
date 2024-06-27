@@ -9,3 +9,7 @@ export async function getProduits() {
 export async function getProduit(id) {
     return await axios.get(API_ENDPOINT + '/' + id)
 }
+
+export async function postProduit(produit) {
+    return await axios.post(API_ENDPOINT, produit)
+}
