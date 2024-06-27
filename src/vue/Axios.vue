@@ -3,6 +3,8 @@
 
 <button @click="chargerProduit(1)">Get Produit</button>
 
+<button @click="retirerProduit(1)">Retirer Produit</button>
+
 <br>
 Produits: {{ produits }}
 
@@ -35,7 +37,7 @@ export default {
         ...mapGetters('produitStore', { produits: 'getProduits', produit: 'getProduitUnique' })
     },
     methods: {
-        ...mapActions('produitStore', ['chargerProduits', 'chargerProduit', 'ajouterProduit', 'resetProduits']), 
+        ...mapActions('produitStore', ['chargerProduits', 'chargerProduit', 'ajouterProduit', 'putProduit', 'retirerProduit', 'resetProduits']), 
         ajouter(p) {
             this.ajouterProduit(p)
         }

@@ -1,4 +1,4 @@
-import { getProduits, getProduit, postProduit } from '@/services/ProduitService'
+import * as produitService from '@/services/ProduitService'
 
 export const state = {
     produits: [], 
@@ -40,21 +40,32 @@ export const actions = {
         commit('ADD_PRODUIT', produit);
     }, 
     chargerProduits({ commit }) {
-        getProduits().then(reponse => {
+        produitService.getProduits().then(reponse => {
             commit('SET_PRODUITS', reponse.data);
         }).catch(e => {
             console.error(e)
         });
     }, 
     chargerProduit({ commit }, id) {
-        getProduit(id).then(r => {
+        produitService.getProduit(id).then(r => {
             commit('SET_PRODUIT', r.data)
         }).catch(e => console.log(e))
     }, 
-    ajouterProduit({ commit }, produit) {
-        postProduit(produit).then(r => {
+    ajouterProduit({ commit, dispatch }, produit) {
+        produitService.postProduit(produit).then(r => {
+            dispatch('chargerProduits');
         })
     }, 
+    modifierProduit({ commit, dispatch }, id, produit) {
+        produitService.putProduit(id, produit).then(r => {
+            dispatch('chargerProduits');
+        })
+    }, 
+    retirerProduit({ commit, dispatch }, id) {
+        produitService.deleteProduit(id).then(_ => {
+            dispatch('chargerProduits');
+        })
+    },
     resetProduits({ commit }) {
         commit('RESET_PRODUITS')
     }
