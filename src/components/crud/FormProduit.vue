@@ -6,7 +6,7 @@
             <input v-if="p.key !== 'id' && mode" v-model="modelValue[p.key]" :type="p.type"/>
         </div>
 
-        <button v-if="!mode">Créer</button>
+        <button>{{ mode ? 'Modifier' :  'Créer' }}</button>
     </form>
 </template>
 
@@ -35,8 +35,9 @@ let id = 0;
             send() {
                 if(!this.mode) {
                     this.produit['id'] = id++;
-                    this.$emit('envoyer', this.produit);
                 }
+
+                this.$emit('envoyer', this.produit);
             }
         }
     }

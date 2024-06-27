@@ -18,6 +18,10 @@ import Details from '@/vue/Details.vue';
 import CRUD from '@/vue/CRUD.vue';
 import Store from '@/vue/Store.vue';
 import Axios from '@/vue/Axios.vue';
+import Produits from '@/vue/Produits/Produits.vue'
+import CreerProduit from '@/vue/Produits/CreerProduit.vue'
+import ModifierProduit from '@/vue/Produits/ModifierProduit.vue'
+import DetailsProduit from '@/vue/Produits/DetailsProduit.vue'
 
 import ExempleForm from '@/vue/ExempleFormulaire/ExempleForm.vue';
 
@@ -113,6 +117,28 @@ const routes = [
         path: '/axios', 
         name:'Axios', 
         component: Axios
+    }, 
+    {
+        path:'/produits', 
+        name: 'Produits', 
+        component: Produits
+    }, 
+    {
+        path:'/creerProduit', 
+        name: 'CreerProduits', 
+        component: CreerProduit
+    }, 
+    {
+        path:'/modifierProduit/:id', 
+        name: 'ModifierProduits', 
+        component: ModifierProduit, 
+        props: true
+    }, 
+    {
+        path:'/detailsProduit/:id', 
+        name: 'DetailsProduits', 
+        component: DetailsProduit, 
+        props: true
     }
 ]
 

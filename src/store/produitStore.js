@@ -29,6 +29,9 @@ export const mutations = {
     }, 
     RESET_PRODUITS(state) {
         state.produits = []
+    }, 
+    RESET_PRODUIT(state) {
+        state.produit = null
     }
 }
 
@@ -51,7 +54,7 @@ export const actions = {
             commit('SET_PRODUIT', r.data)
         }).catch(e => console.log(e))
     }, 
-    ajouterProduit({ commit, dispatch }, produit) {
+    ajouterProduit({ _, dispatch }, produit) {
         produitService.postProduit(produit).then(r => {
             dispatch('chargerProduits');
         })
@@ -68,6 +71,9 @@ export const actions = {
     },
     resetProduits({ commit }) {
         commit('RESET_PRODUITS')
+    }, 
+    resetProduit({ commit }) {
+        commit('RESET_PRODUIT')
     }
 }
 
