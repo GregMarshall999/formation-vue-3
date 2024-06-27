@@ -35,10 +35,13 @@ export default {
         ...mapGetters('produitStore', { produits: 'getProduits', produit: 'getProduitUnique' })
     },
     methods: {
-        ...mapActions('produitStore', ['chargerProduits', 'chargerProduit', 'ajouterProduit']), 
+        ...mapActions('produitStore', ['chargerProduits', 'chargerProduit', 'ajouterProduit', 'resetProduits']), 
         ajouter(p) {
             this.ajouterProduit(p)
         }
+    }, 
+    beforeUnmount() {
+        this.resetProduits();
     }
 }
 

@@ -26,6 +26,9 @@ export const mutations = {
     },
     SET_PRODUIT(state, produit) {
         state.produit = produit;
+    }, 
+    RESET_PRODUITS(state) {
+        state.produits = []
     }
 }
 
@@ -51,6 +54,9 @@ export const actions = {
     ajouterProduit({ commit }, produit) {
         postProduit(produit).then(r => {
         })
+    }, 
+    resetProduits({ commit }) {
+        commit('RESET_PRODUITS')
     }
 }
 
