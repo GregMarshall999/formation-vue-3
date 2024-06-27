@@ -17,6 +17,7 @@
         <router-link :to="{ name: 'CRUD' }">Exercice CRUD</router-link> |
         <router-link :to="{ name: 'Store' }">Store</router-link> |
         <router-link :to="{ name: 'Axios' }">Axios</router-link> | 
-        <router-link :to="{ name: 'Produits' }">Produit</router-link> 
+        <router-link :to="{ name: 'Produits' }">Produit</router-link> | 
+        <router-link :to="{ name: 'Mixins' }">Mixins</router-link>
     </nav>
 </template>

@@ -22,6 +22,7 @@ import Produits from '@/vue/Produits/Produits.vue'
 import CreerProduit from '@/vue/Produits/CreerProduit.vue'
 import ModifierProduit from '@/vue/Produits/ModifierProduit.vue'
 import DetailsProduit from '@/vue/Produits/DetailsProduit.vue'
+import Mixins from '@/vue/Mixins.vue'
 
 import ExempleForm from '@/vue/ExempleFormulaire/ExempleForm.vue';
 
@@ -139,6 +140,11 @@ const routes = [
         name: 'DetailsProduits', 
         component: DetailsProduit, 
         props: true
+    }, 
+    {
+        path: '/mixins', 
+        name: 'Mixins', 
+        component: Mixins
     }
 ]
 
