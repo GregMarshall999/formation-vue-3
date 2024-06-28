@@ -33,7 +33,9 @@ export default {
     methods: {
         ...mapActions('produitStore', ['modifierProduit' , 'chargerProduit']),
         envoyerProduit(p) {
-            this.modifierProduit(this.id, p);
+            console.log(p)
+
+            this.modifierProduit(p);
 
             this.$router.push({ path: '/produits' })
         }

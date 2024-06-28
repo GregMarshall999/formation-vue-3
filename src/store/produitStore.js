@@ -59,8 +59,8 @@ export const actions = {
             dispatch('chargerProduits');
         })
     }, 
-    modifierProduit({ commit, dispatch }, id, produit) {
-        produitService.putProduit(id, produit).then(r => {
+    modifierProduit({ commit, dispatch }, produit) { //utiliser ID de produit
+        produitService.putProduit(produit.id, produit).then(r => {
             dispatch('chargerProduits');
         })
     }, 

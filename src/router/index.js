@@ -24,6 +24,15 @@ import ModifierProduit from '@/vue/Produits/ModifierProduit.vue'
 import DetailsProduit from '@/vue/Produits/DetailsProduit.vue'
 import Mixins from '@/vue/Mixins.vue'
 import Validate from '@/vue/Validate.vue'
+import TagsInputsValidate from '@/vue/TagsInputsValidate.vue'
+
+import Animation from '@/vue/Animation.vue'
+import AppSec from '@/vue/AppSec.vue'
+import Directives from '@/vue/Directives.vue'
+import FunctionnalComp from '@/vue/FunctionnalComp.vue'
+import JSX from '@/vue/JSX.vue'
+import Transition from '@/vue/Transition.vue'
+import UnitTest from '@/vue/UnitTest.vue'
 
 import ExempleForm from '@/vue/ExempleFormulaire/ExempleForm.vue';
 
@@ -151,6 +160,46 @@ const routes = [
         path: '/validate', 
         name: 'Validate', 
         component: Validate
+    }, 
+    {
+        path: '/tagsInputsValidate', 
+        name: 'TagsInputsValidate', 
+        component: TagsInputsValidate
+    }, 
+    {
+        path: '/Animation', 
+        name: 'Animation', 
+        component: Animation
+    },
+    {
+        path: '/AppSec', 
+        name: 'AppSec', 
+        component: AppSec
+    },
+    {
+        path: '/Directives', 
+        name: 'Directives', 
+        component: Directives
+    },
+    {
+        path: '/FunctionnalComp', 
+        name: 'FunctionnalComp', 
+        component: FunctionnalComp
+    },
+    {
+        path: '/JSX', 
+        name: 'JSX', 
+        component: JSX
+    },
+    {
+        path: '/Transition', 
+        name: 'Transition', 
+        component: Transition
+    },
+    {
+        path: '/UnitTest', 
+        name: 'UnitTest', 
+        component: UnitTest
     }
 ]
 

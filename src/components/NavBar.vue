@@ -19,6 +19,14 @@
         <router-link :to="{ name: 'Axios' }">Axios</router-link> | 
         <router-link :to="{ name: 'Produits' }">Produit</router-link> | 
         <router-link :to="{ name: 'Mixins' }">Mixins</router-link> |
-        <router-link :to="{ name: 'Validate' }">Validate</router-link>
+        <router-link :to="{ name: 'Validate' }">Validate</router-link> | 
+        <router-link :to="{ name: 'TagsInputsValidate' }">TagsInputsValidate</router-link> |
+        <router-link :to="{ name: 'Animation' }">Animation</router-link> |
+        <router-link :to="{ name: 'AppSec' }">AppSec</router-link> |
+        <router-link :to="{ name: 'Directives' }">Directives</router-link> |
+        <router-link :to="{ name: 'FunctionnalComp' }">FunctionnalComp</router-link> |
+        <router-link :to="{ name: 'JSX' }">JSX</router-link> |
+        <router-link :to="{ name: 'Transition' }">Transition</router-link> |
+        <router-link :to="{ name: 'UnitTest' }">UnitTest</router-link>
     </nav>
 </template>

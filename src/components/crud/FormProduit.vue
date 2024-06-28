@@ -35,9 +35,11 @@ let id = 0;
             send() {
                 if(!this.mode) {
                     this.produit['id'] = id++;
+                    this.$emit('envoyer', this.produit);
                 }
-
-                this.$emit('envoyer', this.produit);
+                else {
+                    this.$emit('envoyer', this.modelValue);
+                }
             }
         }
     }

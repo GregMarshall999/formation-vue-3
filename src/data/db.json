@@ -1,8 +1,12 @@
 {
   "produits": [
     {
-      "id": "2"
-    },
+      "id": "87b2",
+      "nom_produit": "Casquette",
+      "prix_unite": 10,
+      "qte_stock": 200,
+      "solde": true
+  },
     {
       "id": "87b2"
     }
