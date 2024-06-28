@@ -236,7 +236,7 @@ const router = createRouter({
     routes
 })
 
-router.beforeEach((to, _, next) => {
+router.beforeEach((to, from, next) => {
     if(to.meta.requiresAuth && !AuthService.checkAuth()) {
         next({name: 'Login'})
     }

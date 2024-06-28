@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "vite build",
-    "test:unit": "jest",
+    "test:unit": "vitest --environment jsdom --root src/",
     "dev": "vite",
     "preview": "vite preview"
   },
@@ -12,8 +12,10 @@
     "@vue/babel-plugin-jsx": "^1.2.2",
     "axios": "^1.7.2",
     "babel": "^6.23.0",
+    "jsdom": "^24.1.0",
     "json-server": "^1.0.0-beta.1",
     "vee-validate": "^4.13.1",
+    "vitest": "^1.6.0",
     "vue": "^3.4.29",
     "vue-axios": "^3.5.2",
     "vue-router": "^4.4.0",
