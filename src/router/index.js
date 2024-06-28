@@ -34,7 +34,19 @@ import JSX from '@/vue/JSX.vue'
 import Transition from '@/vue/Transition.vue'
 import UnitTest from '@/vue/UnitTest.vue'
 
+import Home from "@/vue/Interception/Home.vue";
+import Dashboard from "@/vue/Interception/Dashboard.vue";
+import Login from "@/vue/Interception/Login.vue";
+
 import ExempleForm from '@/vue/ExempleFormulaire/ExempleForm.vue';
+
+export const AuthService = {
+    isAuthenticated: false, 
+
+    checkAuth() {
+        return this.isAuthenticated;
+    }
+}
 
 const routes = [
     {
@@ -200,6 +212,22 @@ const routes = [
         path: '/UnitTest', 
         name: 'UnitTest', 
         component: UnitTest
+    }, 
+    {
+        path: '/', 
+        name: 'Home', 
+        component: Home
+    }, 
+    {
+        path: '/dashboard', 
+        name: 'Dashboard', 
+        component: Dashboard, 
+        meta: { requiresAuth: true, roles: ['Admin', 'Managers'] }
+    }, 
+    {
+        path: '/login', 
+        name: 'Login', 
+        component: Login
     }
 ]
 
@@ -207,5 +235,14 @@ const router = createRouter({
     history: createWebHistory(),
     routes
 })
+
+router.beforeEach((to, _, next) => {
+    if(to.meta.requiresAuth && !AuthService.checkAuth()) {
+        next({name: 'Login'})
+    }
+    else {
+        next();
+    }
+});
 
 export default router
