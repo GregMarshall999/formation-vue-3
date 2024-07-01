@@ -40,6 +40,9 @@ import Login from "@/vue/Interception/Login.vue";
 
 import ExempleForm from '@/vue/ExempleFormulaire/ExempleForm.vue';
 
+import Log from '@/vue/LoginInscrip/Log.vue'
+import Inscription from '@/vue/LoginInscrip/Inscription.vue'
+
 export const AuthService = {
     isAuthenticated: false, 
 
@@ -228,6 +231,18 @@ const routes = [
         path: '/login', 
         name: 'Login', 
         component: Login
+    }
+    , 
+    {
+        path: '/log', 
+        name: 'Log', 
+        component: Log
+    }
+    , 
+    {
+        path: '/inscription', 
+        name: 'Inscription', 
+        component: Inscription
     }
 ]
 

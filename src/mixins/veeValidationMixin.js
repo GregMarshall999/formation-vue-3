@@ -14,6 +14,14 @@ export default {
             }
 
             return true;
+        }, 
+        validerMdp(valeur) {
+            const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
+            if(!regex.test(valeur)) {
+                return 'Le mot de passe doit contenir une Majuscule, une minuscule, des caractères numériques et un caractère spécial';
+            }
+
+            return true;
         }
     }
 }

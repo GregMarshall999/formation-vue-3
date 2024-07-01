@@ -6,9 +6,22 @@
       "prix_unite": 10,
       "qte_stock": 200,
       "solde": true
-  },
+    },
     {
-      "id": "87b2"
+      "id": "0ec0",
+      "nom_produit": "Chaussures",
+      "prix_unite": 10,
+      "qte_stock": 100,
+      "en_solde": ""
+    }
+  ],
+  "utilisateurs": [
+    {
+      "id": "1",
+      "nom": "Marshall",
+      "prenom": "Greg",
+      "email": "gmars@test.fr",
+      "mdp": "Test123!"
     }
   ]
 }

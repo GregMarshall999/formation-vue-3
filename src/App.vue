@@ -33,4 +33,9 @@ export default {
 
 <style>
 
+body {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 </style>

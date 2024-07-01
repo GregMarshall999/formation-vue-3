@@ -1,5 +1,6 @@
 import { createStore } from 'vuex';
 import produitStore from '@/store/produitStore'
+import utilisateurStore from './utilisateurStore';
 
 export const state = {
     variableStore: 'Texte', 
@@ -38,7 +39,8 @@ export const actions = {
 
 const store = createStore({
     modules: {
-        produitStore
+        produitStore, 
+        utilisateurStore
     },
     state, 
     getters, 

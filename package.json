@@ -11,6 +11,7 @@
   "dependencies": {
     "@vue/babel-plugin-jsx": "^1.2.2",
     "axios": "^1.7.2",
+    "axios-mock-adapter": "^1.22.0",
     "babel": "^6.23.0",
     "jsdom": "^24.1.0",
     "json-server": "^1.0.0-beta.1",
@@ -25,10 +26,10 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/cli-plugin-unit-jest": "~5.0.0",
-    "@vue/test-utils": "^2.0.0-0",
+    "@vue/test-utils": "^2.4.6",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
-    "jest": "^27.0.5",
+    "jest": "^27.5.1",
     "vite": "^5.3.1"
   },
   "type": "module"

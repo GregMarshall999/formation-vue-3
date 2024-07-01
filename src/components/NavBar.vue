@@ -27,6 +27,19 @@
         <router-link :to="{ name: 'FunctionnalComp' }">FunctionnalComp</router-link> |
         <router-link :to="{ name: 'JSX' }">JSX</router-link> |
         <router-link :to="{ name: 'Transition' }">Transition</router-link> |
-        <router-link :to="{ name: 'UnitTest' }">UnitTest</router-link>
+        <router-link :to="{ name: 'UnitTest' }">UnitTest</router-link> |
+        <router-link :to="{ name: 'Log' }">Login</router-link> |
+        <router-link :to="{ name: 'Inscription' }">S'inscrire</router-link>
     </nav>
 </template>
+
+<style>
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5%;
+}
+
+</style>
